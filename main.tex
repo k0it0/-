@@ -2,7 +2,7 @@
 \usepackage[T1,T2A]{fontenc} \usepackage[utf8]{inputenc}
 \usepackage[english,ukrainian,russian]{babel}
 \usepackage{amssymb,amsmath}
-
+\usepackage[shortlabels]{enumitem}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{siunitx}
@@ -192,6 +192,31 @@
 
 \end{enumerate}
 
+\newpage
+\section{Исследование кубического сплайна}
 
+Сплайн представляет собой функцию, проходящую через жёстко заданные точки таким образом, чтобы потенциальная энергия изгибов принимала минимальное значение. Данный эффект достигается нахождением четвёртой производной данной функции, которая принемает значение 0. Исходя из этого сплайн можно представить как полином третьей степени на каждом отрезке $(xi,x_{i+1})$.
+
+Заданы точки:
+\begin{enumerate}[I]
+    \item (0,4)
+    \item (0.25,3.6)
+    \item (1.25,4.575)
+    \item (2.125,4.017)
+    \item (3.25,3.833)
+\end{enumerate}
+
+
+
+
+\newpage
+\begin{thebibliography}{}
+    \bibitem .Ю.С. Завьялов. \textit{Методы сплайн-функций.} М.Наука, 1980.
+    \bibitem .Калиткин. \textit{Численные методы.} М.,Мир, 1980.
+    \bibitem  .\textit{"Разделённая разность".} https://ru.wikipedia.org/wiki/Разделённая\_разность
+    \bibitem .\textit{Викиучебник- "Scilab/Графики".}https://ru.wikibooks.org/wiki/Scilab/Графики
+    \bibitem .Андриевский А.Б., Андриевский Б.Р., Капитонов А.А., Фрадков А.Л. \textit{РЕШЕНИЕ ИНЖЕНЕРНЫХ ЗАДАЧ В SCILAB} - Санкт-Петербург: НИУ ИТМО, 2013. - 97 с.
+    
+\end{thebibliography}
 
 \end{document}
