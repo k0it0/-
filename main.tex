@@ -436,10 +436,74 @@ f(x) =
     \section{Задача оптимального распределения неоднородных ресурсов}
     
    
-   
-   
+        \begin{table}[h]
+        \centering
+     \caption{Условия поставленой задачи}
+\begin{tabular}[c]{|*{6}{c|}}
+\hline
+Исп. рес-ы & Изд_1 & Изд_2 & Изд_3 & Изд_4 & Наличие\\
+\hline
+Труд. & 3 & 5 & 5 & 3 & 11\\
+\hline
+Матер. & 4 & 5 & 8 & 5 & 8\\
+\hline
+Фин. & 5 & 6 & 4 & 8 & 26\\
+\hline
+Profit & 40 & 50 & 25 & 25\\
+\hline
+\end{tabular}
+\end{table}
 
+Для нахождения оптимального решения воспользуемся функцией \textit{linpro} пакета \textit{SciLab}, где \textit{"p"} - коэф. при неизвестных целевой $f$, \textit{"C"} - матрица неизвествых системы ограничений, а \textit{"b"} содержит свободные члены (\textit {"ci"} и \textit{"cs"} - соответственно нижняя и верхняя границы переменных).
+
+ \vspace{20pt}
+ 
+Система ограничений выглядит следующим образом.
+
+\begin{equation*}
+\begin{cases}
+  3x_1+5x_2+5x_3+3x_4 \leqslant 11
+   \\
+  4x_1+5x_2+8x_3+5x_4 \leqslant 8
+   \\
+  5x_1+6x_2+4x_3+4x_4 \leqslant 26
+  \end{cases}
+\end{equation*}
+
+\vspace{20pt}
+
+Составляем:
+  
+   \textit{f_{max}} = $40x_1+50x_2+25x_3+25x_4$
    
+   \vspace{20pt}
+   
+   \textit{C}= \begin{pmatrix}
+   3 \ 5 \ 5 \ 3 \\
+   4 \ 5 \ 8 \ 5 \\
+   5 \ 6 \ 4 \ 4 
+   \end{pmatrix}  \textit{b}= \begin{pmatrix}
+   11 \\
+   8 \\
+   26
+   \end{pmatrix} \textit{p}= \begin{pmatrix}
+   40 \\
+   50 \\
+   25 \\
+   25
+   \end{pmatrix}
+   
+  В итоге было рассчитаны значения, при которых прибыль максимальна:
+  
+  \textit{f_{max}} = 80 
+  
+  \textit{larg} = (0;0;55;25;0;10;0)
+  
+  \textit{x} = (0;1.6;0;0)
+  
+  Ответ: Прибыль максимальна при производстве 1.6 единиц изделия №2.
+   
+  
 \newpage
 \begin{thebibliography}{}
     \bibitem .Ю.С. Завьялов. \textit{Методы сплайн-функций.} М.Наука, 1980.
